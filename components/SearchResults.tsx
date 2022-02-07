@@ -59,7 +59,7 @@ const SearchResults = (props: Props) => {
 
                                 // property type
                                 const propertyType = props.types.find(
-                                    (type) =>
+                                    (type: any) =>
                                         type.value === property.propertyType
                                 );
 

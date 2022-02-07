@@ -16,9 +16,9 @@ const Search = () => {
     const [filters, setFilters] = useState({});
 
     const [search, setSearch] = useState("");
-    const [foundProperties, setFoundProperties] = useState([]);
+    const [foundProperties, setFoundProperties] = useState<string[]>([]);
 
-    const [selectedProperties, setSelectedProperties] = useState([]);
+    const [selectedProperties, setSelectedProperties] = useState<string[]>([]);
 
     // get property types (one time)
     useEffect(() => {
@@ -59,7 +59,7 @@ const Search = () => {
                         selectedFilter !== "" ? selectedFilter : undefined,
                 })
                     .then(async (data: any) => {
-                        return data.properties.map(async (property) => {
+                        return data.properties.map(async (property: any) => {
                             // get property
                             return await fetchPropertyDetails(property.id)
                                 .then((data) => {
