@@ -1,0 +1,39 @@
+@import "../base/variables.scss";
+
+.table {
+    background-color: $color4;
+
+    overflow-x: auto;
+
+    @media only screen and (max-width: $responsive-md) {
+        table {
+            th,
+            td {
+                white-space: nowrap;
+                padding-left: $padding_1;
+                padding-right: $padding_1;
+            }
+
+            input {
+                outline: none !important;
+            }
+        }
+    }
+}
+
+.start {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: $padding_1_5;
+}
+
+.area {
+    &:last-child {
+        margin-top: $padding_1_5;
+    }
+}

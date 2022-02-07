@@ -1,0 +1,27 @@
+// Colours
+$color1: #ffdb43;
+$color2: #706327;
+$color3: rgb(72, 72, 72);
+$color4: #f4f5f9;
+
+$shadow: 5px 5px 15px 5px rgba(138, 138, 138, 0.1);
+
+// Padding
+$padding_0_10: calc(0.1vw + 0.1rem);
+$padding_0_25: calc(0.25vw + 0.25rem);
+$padding_0_5: calc(0.5vw + 0.5rem);
+$padding_0_75: calc(0.75vw + 0.75rem);
+$padding_1: calc(1vw + 1rem);
+$padding_1_5: calc(1.5vw + 1.5rem);
+$padding_2: calc(2vw + 2rem);
+$padding_3: calc(3vw + 3rem);
+$padding_4: calc(4vw + 4rem);
+$padding_5: calc(5vw + 5rem);
+$padding_6: calc(6vw + 6rem);
+$padding_8: calc(8vw + 8rem);
+
+// Responsive sizes
+$responsive-sm: 576px;
+$responsive-md: 768px;
+$responsive-lg: 992px;
+$responsive-xl: 1200px;

@@ -1,0 +1,162 @@
+@import "./variables.scss";
+
+#__next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: large;
+}
+
+// Forms
+input,
+button {
+    border-radius: $padding_0_25;
+    padding: $padding_0_5 $padding_1_5;
+
+    &:focus-within {
+        outline: 3px solid $color2;
+    }
+}
+
+input {
+    border: 3px solid $color4;
+    padding: $padding_0_5;
+
+    transition: (border 0.5s ease-in-out, box-shadow 0.5s ease-in-out);
+
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: $shadow;
+        border: 3px solid $color4 !important;
+    }
+}
+
+button {
+    border: 3px solid $color1;
+
+    cursor: pointer;
+
+    background: $color1;
+    background: linear-gradient(
+        0deg,
+        $color1 0%,
+        rgba($color1, 0.5) calc(100% - #{$padding_0_10})
+    );
+
+    transition: (border 0.5s ease-in-out);
+
+    &:hover {
+        border: 3px solid $color3;
+    }
+}
+
+// Tables
+table {
+    width: 100%;
+
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    thead {
+        th {
+            border-bottom: 2px solid #d0d0d3;
+        }
+        th {
+            &:not(:last-child) {
+                border-right: 2px solid $color4;
+            }
+        }
+    }
+
+    th,
+    td {
+        padding: $padding_0_5 $padding_0_25;
+        border: 0;
+    }
+
+    th {
+        background-color: #e6e6e6;
+    }
+
+    tr {
+        border-bottom: 1px solid black;
+        transition: (background-color 0.15s ease-in-out);
+
+        &:hover {
+            background-color: rgba($color1, 0.2);
+            cursor: pointer;
+        }
+    }
+
+    td {
+        text-align: center;
+    }
+}
+
+// Layouts
+main {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+header {
+    position: relative;
+    background-color: $color4;
+    padding: $padding_0_75;
+
+    text-align: center;
+
+    // logo
+    .logo {
+        position: absolute;
+        top: $padding_0_75;
+        left: $padding_0_75;
+        bottom: calc(-1 * #{$padding_0_75});
+
+        width: auto;
+
+        border: 8px solid white;
+        box-shadow: $shadow;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media only screen and (max-width: $responsive-md) {
+            position: unset;
+
+            width: $padding_6;
+            height: $padding_6;
+
+            margin: $padding_0_75 auto;
+        }
+    }
+}

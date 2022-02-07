@@ -1,0 +1,43 @@
+@import "../base/variables.scss";
+
+.outer {
+    margin: auto 0;
+    width: 100%;
+}
+
+.types {
+    background-color: #f4f5f9;
+    padding: $padding_0_75;
+
+    @media only screen and (max-width: $responsive-md) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.type {
+    &:not(:last-child) {
+        margin-bottom: $padding_0_25;
+    }
+
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &.selected {
+        font-weight: bold;
+    }
+
+    @media only screen and (max-width: $responsive-md) {
+        margin: $padding_0_25;
+
+        &:not(:last-child):after {
+            content: "|";
+            padding-left: $padding_0_5;
+            font-weight: normal;
+        }
+    }
+}

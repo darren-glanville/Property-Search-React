@@ -1,0 +1,19 @@
+@import "../base/variables.scss";
+
+.form {
+    display: flex;
+
+    @media only screen and (max-width: $responsive-md) {
+        flex-direction: column;
+    }
+
+    input {
+        flex: 1;
+        margin-right: $padding_0_5;
+
+        @media only screen and (max-width: $responsive-md) {
+            margin-bottom: $padding_1;
+            margin-right: 0;
+        }
+    }
+}
